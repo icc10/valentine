@@ -1,0 +1,461 @@
+body {
+  font-family: "Times New Roman";
+  margin: 0;
+}
+
+#parentDiv{
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
+  height: 100vh;
+}
+
+.card{
+  background-color: lightpink;
+  border-radius: 30px;
+  box-shadow: 6px 6px 6px rgba(0,0,0,0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: rotate(0) scale(1);
+  transform-origin: center;
+  width: 30%;
+  height: 80%;
+  position: absolute;
+  z-index: 1;
+}
+#flowerContainer{
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 2;
+  pointer-events: none;
+}
+
+#spinWrapper{
+  width: 30%;
+  height: 80%;
+  transform-origin: center;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;
+}
+
+
+.cardFlowerAnimation {
+  animation: openLetterFlowerCont 2s forwards;
+}
+
+.cardFlowerAnimationRev {
+  animation: openLetterFlowerCont 2s reverse;
+}
+
+.cardAnimation {
+  animation: openLetter 2s forwards;
+}
+.cardAnimationRev {
+  animation: openLetter 2s forwards;
+  animation-direction: reverse;
+}
+
+.title{
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  line-height: 80px;
+  padding: 5px;
+}
+
+
+
+#flower1{
+  position: absolute;
+  top: 17%;
+  left:38%;
+}
+
+#flower2{
+  position: absolute;
+  top: 17%;
+  left:62%;
+}
+
+#flower3{
+  position: absolute;
+  top: 83%;
+  left:38%;
+}
+
+#flower4{
+  position: absolute;
+  top: 83%;
+  left:62%;
+}
+
+.flower1{
+  position: absolute;
+  top: 17%;
+  left:38%;
+}
+
+.flower2{
+  position: absolute;
+  top: 17%;
+  left:62%;
+}
+
+.flower3{
+  position: absolute;
+  top: 83%;
+  left:38%;
+}
+
+.flower4{
+  position: absolute;
+  top: 83%;
+  left:62%;
+}
+
+
+
+.circle{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: gold;
+  border-radius: 50%;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index:2;
+}
+
+.petal {
+  position: absolute;
+  width: 20px;
+  height: 40px;
+  background: #6FB042;
+  border-radius: 50%;
+
+  top: 50%;
+  left: 50%;
+
+  transform-origin: bottom center;
+  z-index:1;
+}
+
+.p1 { transform: translate(-50%, -100%) rotate(0deg); }
+.p2 { transform: translate(-50%, -100%) rotate(60deg); }
+.p3 { transform: translate(-50%, -100%) rotate(120deg); }
+.p4 { transform: translate(-50%, -100%) rotate(180deg); }
+.p5 { transform: translate(-50%, -100%) rotate(240deg); }
+.p6 { transform: translate(-50%, -100%) rotate(300deg); }
+
+
+.button {
+  border-radius: 30px;
+  border: 5px solid lightpink;
+  background-color: white;
+  font-family: "Times New Roman";
+  font-size: 20px;
+  height: 50px;
+  width: 200px;
+  border: 2px solid black;
+  margin: 0 1% 0 1%;
+}
+
+.button:hover{
+  transition: background-color 0.5s;
+  background-color: lightcoral;
+  color: white;
+  border-color: white;
+}
+
+.button:active {
+  background-color: darkred;
+  color: white;
+  border-color: white;
+}
+
+.buttonDiv{
+  position: relative;
+}
+
+@keyframes openLetter {
+  from{width: 30%;}
+  to{width: 60%;}
+}
+
+.openAnimation{
+  animation: open 1s forwards;
+}
+
+.openAnimationRev{
+  animation: close 2s forwards;
+  animation-direction: reverse;
+}
+
+.spinCardAnimation{
+  animation: spinCard 2s linear forwards;
+}
+.spinCardAnimation2{
+  animation: spinCard2 2s linear forwards;
+}
+
+@keyframes spinCard {
+  0%{
+    width: 100%;
+    height: 100%;
+    transform: rotate(0deg) scale(1);}
+  50%{
+    width: 80%; height: 60%;
+  }
+  100%{transform: rotate(1440deg) scale(0);}
+}
+
+@keyframes spinCard2 {
+  0%{
+    transform: rotate(0deg) scale(1);}
+  50%{
+    width: 50%; height: 50%;
+  }
+  100%{transform: rotate(1440deg) scale(0);}
+}
+
+@keyframes open {
+  from {
+    opacity: 100%;
+    display: block;
+  }
+  to{
+    padding-top: 4%;
+    opacity: 0%;
+    display:none;
+  }
+}
+
+@keyframes close {
+  from {
+    opacity: 100%;
+    display: block;
+  }
+  to{
+    padding-top: 4%;
+    opacity: 0%;
+    display:none;
+  }
+}
+.openAnimationBut{
+  animation: openBut 1s forwards;
+}
+
+@keyframes openBut {
+  from {
+    opacity: 100%;
+  }
+  to{
+    opacity: 0%;
+    display:none;
+  }
+}
+
+
+.LFAnimation {
+  animation: LF 2s forwards;
+}
+
+.LFAnimationRev {
+  animation: LF 2s forwards;
+  animation-direction: reverse;
+}
+
+@keyframes LF {
+  from{transform: rotate(0deg); left:38%;}
+  to{
+    left: 25%;
+    transform: rotate(-360deg);
+  }
+}
+
+.RFAnimation {
+  animation: RF 2s forwards;
+}
+
+.RFAnimationRev {
+  animation: RF 2s forwards;
+  animation-direction: reverse;
+}
+
+@keyframes RF {
+  from{transform: rotate(0deg); left:62%;}
+  to{
+    left: 75%;
+    transform: rotate(360deg);
+  }
+}
+
+.openFlowerAnimation {
+  animation: openFlower 1s forwards;
+}
+
+.openFlowerAnimationRev {
+  animation: openFlower 2s forwards;
+  animation-direction: reverse;
+}
+
+@keyframes openFlower {
+  from{display: block;}
+  to{
+    opacity: 0%;
+    margin-top: 3.5%;
+    display: none;}
+}
+
+@keyframes spinFlower {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.cardContentInit{
+  display:none;
+}
+
+.lside{
+  width:40%;
+  height: 70%;
+  background-color: aliceblue;
+}
+.rside{
+  width:40%;
+  height: 70%;
+  background-color: aliceblue;
+}
+
+.fold {
+  background-color: black;
+  opacity: 20%;
+  width: .5%;
+  height: 100%;
+}
+
+.empty{
+  width: 4%;
+}
+
+h2{
+  text-align: center;
+  margin-top: 10%;
+}
+
+.cardWriting{
+  padding: 5% 10% 10% 10%;
+  line-height: 30px;
+  font-size: 20px;
+}
+
+h1{
+  text-align: center;
+  padding-top: 30%;
+}
+
+.alignContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+}
+
+
+.heart{
+  margin-top: 5%;
+  height: 100px;
+  width: 100px;
+}
+
+.cardContentAnimation{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  animation: cardContent 2s forwards;
+}
+
+@keyframes cardContent {
+  from{opacity: 0%;}
+  to{opacity: 100%;}
+}
+
+.moveButton{
+  position: absolute;
+}
+
+
+.pinkTile{
+  display: flex;
+  justify-content: center;
+  background-color: lightpink;
+  height: 100%;
+  width: 33%;
+  margin: 0 5px 0 5px;
+  padding:5px;
+  align-items: center;
+
+}
+
+img{
+  height: 100%;
+  width: fit-content;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: spin 50s linear infinite;
+}
+
+.carousel{
+  margin:100px auto;
+  width: 90%;
+  display:none;
+  overflow: hidden;
+}
+.carousel::-webkit-scrollbar{
+  overflow: hidden;
+  display:none;
+}
+.group {
+  display: flex;
+  gap: 1em;
+  padding-right: 1em;
+}
+.tile{
+  flex: 0 0 5em;
+  height: 5em;
+  padding: 1em;
+  background-color: lightpink;
+  font-size: 3rem;
+  border-radius: .2em;
+  text-align: center;
+  align-content: center;
+  border: 2px #6FB042 solid;
+}
+@keyframes spin {
+  from{translate: 0;}
+  to{translate: -50%;}
+}
+
+@keyframes slidesAppear{
+  from{opacity: 0%;}
+  to{opacity: 100%;}
+}
+
+.slidesAppearAnimation {
+  animation: slidesAppear 3s linear forwards;
+}
+
+
