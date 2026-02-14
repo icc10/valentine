@@ -122,6 +122,8 @@ document.addEventListener("DOMContentLoaded", () => {
       openButtonDiv.style.display = "none";
 
       cardContent.style.display = "none";
+      song2.pause();
+      song.play();
     }
   });
 
